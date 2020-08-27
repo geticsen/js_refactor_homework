@@ -2,7 +2,7 @@ const { deliveryDate } = require('../src/delivery');
 
 const deliveryTest = require('ava');
 
-deliveryTest('case 1:isRush true ,deliveryState in MA',t => {
+deliveryTest('case 1:isRush true ,deliveryState is MA',t => {
     const anOrder={
         deliveryState:'MA',
         placedOn:{
@@ -13,7 +13,7 @@ deliveryTest('case 1:isRush true ,deliveryState in MA',t => {
     };
     t.is(2,deliveryDate(anOrder,true))
 })
-deliveryTest('case 2:isRush true ,deliveryState in NY',t => {
+deliveryTest('case 2:isRush true ,deliveryState is NY',t => {
     const anOrder={
         deliveryState:'NY',
         placedOn:{
@@ -24,7 +24,7 @@ deliveryTest('case 2:isRush true ,deliveryState in NY',t => {
     };
     t.is(3,deliveryDate(anOrder,true))
 })
-deliveryTest('case 3:isRush true ,deliveryState in ELSE',t => {
+deliveryTest('case 3:isRush true ,deliveryState is ELSE',t => {
     const anOrder={
         deliveryState:'ELSE',
         placedOn:{

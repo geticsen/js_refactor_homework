@@ -6,11 +6,12 @@ class Employee {
   }
 
   validateType (type) {
-    if (![
+    const allowType = [
       'engineer',
       'manager',
       'salesman',
-    ].includes(type)) {
+    ]
+    if (!allowType.includes(type)) {
       throw new Error(`Employee cannot be of type ${type}`);
     }
   }

@@ -1,32 +1,31 @@
 calculateRushdeliveryDate = (anOrder) => {
-  let deliveryTime = 0 ;
+  const baseDeliveryTime = 1 ;
   const nearCity = ['MA','CT',]
   const farCity = ['NY','NH',]
   if (nearCity.includes(anOrder.deliveryState)) {
-    deliveryTime = 1;
+    return anOrder.placedOn.plusDays(1 + baseDeliveryTime);
   }
   else if (farCity.includes(anOrder.deliveryState)) {
-    deliveryTime = 2;
+    return anOrder.placedOn.plusDays(2 + baseDeliveryTime);
   }
   else {
-    deliveryTime = 3;
+    return anOrder.placedOn.plusDays(3 + baseDeliveryTime);
   }
-  return anOrder.placedOn.plusDays(1 + deliveryTime);
 }
 calculateNotRushdeliveryDate = (anOrder)=>{
-  let deliveryTime = 0 ;
+  const baseDeliveryTime = 2 ;
   const nearCity = ['MA','CT','NY',]
   const farCity = ['ME','NH',]
   if (nearCity.includes(anOrder.deliveryState)) {
-    deliveryTime = 2;
+    return anOrder.placedOn.plusDays(2 + baseDeliveryTime);
   }
   else if (farCity.includes(anOrder.deliveryState)) {
-    deliveryTime = 3;
+    return anOrder.placedOn.plusDays(3 + baseDeliveryTime);
   }
   else {
-    deliveryTime = 4;
+    return anOrder.placedOn.plusDays(4 + baseDeliveryTime);
   }
-  return anOrder.placedOn.plusDays(2 + deliveryTime);
+  
 }
 function deliveryDate(anOrder, isRush) {
   if (isRush) {

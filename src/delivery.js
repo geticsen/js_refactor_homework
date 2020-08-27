@@ -1,7 +1,7 @@
 function deliveryDate(anOrder, isRush) {
-  
+  let deliveryTime;
   if (isRush) {
-    let deliveryTime;
+    
     if ([
       'MA',
       'CT',
@@ -20,7 +20,6 @@ function deliveryDate(anOrder, isRush) {
     return anOrder.placedOn.plusDays(1 + deliveryTime);
   }
   else {
-    let deliveryTime;
     if ([
       'MA',
       'CT',

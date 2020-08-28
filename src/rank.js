@@ -50,8 +50,7 @@ function voyageProfitFactor(voyage, history) {
     if (voyage.length > 18) {
       result -= 1;
     }
-  }
-  else {
+  }else {
     if (history.length > 8) {
       result += 1;
     }
@@ -73,27 +72,6 @@ function rating(voyage, history) {
     return 'B';
   }
 }
-
-const voyage = {
-  zone: 'west-indies',
-  length: 10,
-};
-const history = [
-  {
-    zone: 'east-indies',
-    profit: 5,
-  }, {
-    zone: 'west-indies',
-    profit: 15,
-  }, {
-    zone: 'china',
-    profit: -2,
-  },
-  {
-    zone: 'west-africa',
-    profit: 7,
-  },
-];
 
 module.exports = {
   rating

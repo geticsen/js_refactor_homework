@@ -132,4 +132,13 @@ rankTest('case 6 : voyage length is 19 zone is china  and history without china 
   const rank = rating(voyage,history.slice(3,16))
   t.is('B',rank)
 });
+rankTest('case 7 : voyage length is 19 zone is china  and history have china history length is 9', t => {
+  const voyage = {
+    zone: 'china',
+    length: 19,
+  };
+
+  const rank = rating(voyage,history.slice(0,9))
+  t.is('B',rank)
+});
   

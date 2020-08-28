@@ -20,7 +20,17 @@ rankTest('case 2', t => {
     const rank = rating(voyage,history.slice(0,18))
     t.is('B',rank)
 });
+rankTest('case 3', t => {
+    const voyage = {
+      zone: 'east-indies',
+      length: 2,
+    };
+  
+    const rank = rating(voyage,history.slice(0,18))
+    t.is('A',rank)
+});
 
+  
 const voyage = {
   zone: 'west-indies',
   length: 10,

@@ -5,8 +5,8 @@ function printOwing(invoice) {
   result += "***********************\n";
 
   // calculate outstanding
-  for (const o of invoice.borderSpacing) {
-    outstanding += o.amount;
+  for (const borderSpacing of invoice.borderSpacing) {
+    outstanding += borderSpacing.amount;
   }
 
   // record due date

@@ -12,7 +12,6 @@ printTest('test case 1:  ',t => {
         ] 
     }
     const result  = printOwing(invoice);
-    console.log(result);
     t.is("***********************\n**** Customer Owes ****\n***********************\nname: james\namount: 3\namount: 9/27/2020\n",result)
 })
 

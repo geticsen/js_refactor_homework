@@ -4,16 +4,9 @@ function voyageRisk(voyage) {
     'china',
     'east-indies',
   ];
-  if (voyage.length > 4) {
-    result += 2;
-  }
-  if (voyage.length > 8) {
-    result += voyage.length - 8;
-  }
-
-  if (riskZone.includes(voyage.zone)) {
-    result += 4;
-  }
+  result += voyage.length > 4 ?2:0;
+  result += voyage.length > 8 ?voyage.length - 8:0;
+  result += riskZone.includes(voyage.zone)?4:0;
   return Math.max(result, 0);
 }
 

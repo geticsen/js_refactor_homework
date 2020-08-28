@@ -99,5 +99,3 @@ module.exports = {
   rating
 };
 
-const myRating = rating(voyage, history);
-console.log(`myRating: ${myRating}`);

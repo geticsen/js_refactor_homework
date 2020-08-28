@@ -87,13 +87,13 @@ rankTest('case 1 : voyage length is 10 zone is east-indies  and history without 
   t.is('A',rank)
 });
 
-rankTest('case 2', t => {
+rankTest('case 2 : voyage length is 10 zone is east-indies  and history without china history length <= 10', t => {
     const voyage = {
       zone: 'east-indies',
-      length: 18,
+      length: 13,
     };
   
-    const rank = rating(voyage,history.slice(0,18))
+    const rank = rating(voyage,history.slice(0,history.length))
     t.is('B',rank)
 });
 rankTest('case 3', t => {
